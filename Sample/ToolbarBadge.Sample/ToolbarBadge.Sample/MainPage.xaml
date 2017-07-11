@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:plugin="clr-namespace:Plugin.Toolbar.Badge.Abstractions;assembly=Plugin.Toolbar.Badge.Abstractions"
+             x:Class="ToolbarBadge.Sample.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <plugin:BadgeToolbarItem Icon="ic_shopping_cart_white_24dp" BadgeText="{Binding ItemsCount}" Command="{Binding BasketCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Label Text="Welcome to Xamarin Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Button Text="Increment count" Command="{Binding Increment}" />
+    </StackLayout>
+
+</ContentPage>
